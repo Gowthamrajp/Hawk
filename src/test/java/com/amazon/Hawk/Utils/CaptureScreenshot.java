@@ -11,25 +11,25 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 public class CaptureScreenshot {
-    public static void captureScreenshot(WebDriver driver, String methodName) throws IOException {
+    public static File captureScreenshot(WebDriver driver, String methodName) throws IOException {
         // Get the method name
         // Take screenshot
     	System.out.println("screenshot capturing");
         TakesScreenshot ts = (TakesScreenshot) driver;
-        File source = ts.getScreenshotAs(OutputType.FILE);
+        File screenshot = ts.getScreenshotAs(OutputType.FILE);
         // Define the destination path
         Path destinationDirectory = Paths.get("C:\\Users\\gowthrj\\eclipse-workspace\\Hawk\\src\\test\\resources\\Screenshots");//, methodName + System.currentTimeMillis() + ".png");
         if (!Files.exists(destinationDirectory)) {
             Files.createDirectories(destinationDirectory);
         }
         Path destinationPath = destinationDirectory.resolve(methodName + System.currentTimeMillis() + ".png");
-        System.out.print(source.toPath()+ " "+destinationPath);
         try {
             // Copy the screenshot to the specified path
-            Files.copy(source.toPath(), destinationPath);
+            Files.copy(screenshot.toPath(), destinationPath);
             Reporter.log("<br><img src='" + destinationPath.toAbsolutePath() + "' height='300' width='400'/><br>");
         } catch (IOException e) {
             e.printStackTrace();
         }
+		return screenshot;
     }
 }

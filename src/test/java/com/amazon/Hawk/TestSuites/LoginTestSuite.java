@@ -1,5 +1,6 @@
 package com.amazon.Hawk.TestSuites;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
@@ -13,6 +14,7 @@ import com.amazon.Hawk.Base.BaseTest;
 import com.amazon.Hawk.Constants.TestData;
 import com.amazon.Hawk.Pages.LoginPO;
 import com.amazon.Hawk.Utils.CaptureScreenshot;
+import com.amazon.Hawk.Utils.JiraHelper;
 
 public class LoginTestSuite extends BaseTest{
 	
@@ -33,7 +35,8 @@ public class LoginTestSuite extends BaseTest{
 		} catch (Exception e) {
 			System.out.println("Test case failed: " + e.getMessage());
 			e.printStackTrace();
-			CaptureScreenshot.captureScreenshot(driver, LoginTestSuite.getMethodName());
+			File screenshotFile = CaptureScreenshot.captureScreenshot(driver, LoginTestSuite.getMethodName());
+			JiraHelper.createIssue(LoginTestSuite.getMethodName(), e.getMessage(), screenshotFile);
 		} finally {
 			loginPO.quit();
 		}

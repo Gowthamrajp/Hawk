@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.amazon.Hawk.TestSuites.BuyTestSuite">
+      <class name="com.amazon.Hawk.TestSuites.LoginTestSuite">
         <methods>
-          <include name="addToCartAndVerify" invocation-numbers="1"/>
-          <include name="buyProductAndVerify"/>
-          <include name="cancelOrderAndVerify"/>
+          <include name="login_with_correct_credentials" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- com.amazon.Hawk.TestSuites.BuyTestSuite -->
+      </class> <!-- com.amazon.Hawk.TestSuites.LoginTestSuite -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
