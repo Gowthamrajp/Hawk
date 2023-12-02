@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="5" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-11-30T11:24:36 IST" name="Default suite" finished-at="2023-11-30T11:24:37 IST" duration-ms="1483">
+    <groups>
+    </groups>
+    <test started-at="2023-11-30T11:24:36 IST" name="Default test" finished-at="2023-11-30T11:24:37 IST" duration-ms="1483">
+      <class name="com.amazon.Hawk.TestSuites.DbTestSuite">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.amazon.Hawk.TestSuites.DbTestSuite@5158b42f]" started-at="2023-11-30T11:24:36 IST" name="setUp" finished-at="2023-11-30T11:24:37 IST" duration-ms="1155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="findDuplicates()[pri:0, instance:com.amazon.Hawk.TestSuites.DbTestSuite@5158b42f]" started-at="2023-11-30T11:24:37 IST" name="findDuplicates" finished-at="2023-11-30T11:24:37 IST" duration-ms="181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findDuplicates -->
+        <test-method signature="findMaxPriceProduct()[pri:0, instance:com.amazon.Hawk.TestSuites.DbTestSuite@5158b42f]" started-at="2023-11-30T11:24:37 IST" name="findMaxPriceProduct" finished-at="2023-11-30T11:24:37 IST" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findMaxPriceProduct -->
+        <test-method signature="verifyMostSoldProduct()[pri:0, instance:com.amazon.Hawk.TestSuites.DbTestSuite@5158b42f]" started-at="2023-11-30T11:24:37 IST" name="verifyMostSoldProduct" finished-at="2023-11-30T11:24:37 IST" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMostSoldProduct -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.Hawk.TestSuites.DbTestSuite@5158b42f]" started-at="2023-11-30T11:24:37 IST" name="tearDown" finished-at="2023-11-30T11:24:37 IST" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.amazon.Hawk.TestSuites.DbTestSuite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

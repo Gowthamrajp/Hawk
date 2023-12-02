@@ -1,0 +1,445 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>24/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Nov 26 14:49:12 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>518 seconds (518430 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.BuyTestSuite.cancelOrderAndVerify()'><b>cancelOrderAndVerify</b><br>Test class: com.amazon.Hawk.TestSuites.BuyTestSuite</td>
+<td><div><pre>java.lang.AssertionError: Order is not cancelled expected [true] but found [false]
+	at com.amazon.Hawk.TestSuites.BuyTestSuite.cancelOrderAndVerify(BuyTestSuite.java:97)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace267061647", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace267061647'><pre>java.lang.AssertionError: Order is not cancelled expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at com.amazon.Hawk.TestSuites.BuyTestSuite.cancelOrderAndVerify(BuyTestSuite.java:97)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>43</td>
+<td>com.amazon.Hawk.TestSuites.BuyTestSuite@294425a7</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.BuyTestSuite.addToCartAndVerify()'><b>addToCartAndVerify</b><br>Test class: com.amazon.Hawk.TestSuites.BuyTestSuite<br>Parameters: SG Bouncer Leather Ball (Red) , Standard Size 1Pc, chrome<br/>
+<a href="#Output-1595180029" onClick='toggleBox("Output-1595180029", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1595180029" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1595180029">
+<br><img src='C:\Users\gowthrj\eclipse-workspace\Hawk\src\test\resources\Screenshots\addToCartAndVerify1700990612430.png' height='300' width='400'/><br><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@value=&apos;Delete&apos;]&quot;}
+  (Session info: chrome=119.0.6045.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [81c74a9603576fce61e156f1c58b0129, findElement {using=xpath, value=//input[@value=&apos;Delete&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\gowthrj\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57131}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57131/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 81c74a9603576fce61e156f1c58b0129
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at com.amazon.Hawk.Pages.BuyPO.deleteProductsFromCart(BuyPO.java:59)
+	at com.amazon.Hawk.TestSuites.BuyTestSuite.addToCartAndVerify(BuyTestSuite.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1595180029", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1595180029'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@value=&apos;Delete&apos;]&quot;}
+  (Session info: chrome=119.0.6045.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [81c74a9603576fce61e156f1c58b0129, findElement {using=xpath, value=//input[@value=&apos;Delete&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\gowthrj\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57131}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57131/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 81c74a9603576fce61e156f1c58b0129
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at com.amazon.Hawk.Pages.BuyPO.deleteProductsFromCart(BuyPO.java:59)
+	at com.amazon.Hawk.TestSuites.BuyTestSuite.addToCartAndVerify(BuyTestSuite.java:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>43</td>
+<td>com.amazon.Hawk.TestSuites.BuyTestSuite@294425a7</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.BuyTestSuite.addToCartAndVerify()'><b>addToCartAndVerify</b><br>Test class: com.amazon.Hawk.TestSuites.BuyTestSuite<br>Parameters: SG Bouncer Leather Ball (Red) , Standard Size 1Pc, firefox<br/>
+<a href="#Output-66747889" onClick='toggleBox("Output-66747889", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-66747889" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-66747889">
+<br><img src='C:\Users\gowthrj\eclipse-workspace\Hawk\src\test\resources\Screenshots\addToCartAndVerify1700990656429.png' height='300' width='400'/><br><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@value=&apos;Delete&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [5185e41d-3549-4b28-93f3-02b873e3c6eb, findElement {using=xpath, value=//input[@value=&apos;Delete&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 115.4.0, moz:accessibilityChecks: false, moz:buildID: 20231016232700, moz:debuggerAddress: 127.0.0.1:15675, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 7240, moz:profile: C:\Users\gowthrj\AppData\Lo..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:15675/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5185e41d-3549-4b28-93f3-02b873e3c6eb
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at com.amazon.Hawk.Pages.BuyPO.deleteProductsFromCart(BuyPO.java:59)
+	at com.amazon.Hawk.TestSuites.BuyTestSuite.addToCartAndVerify(BuyTestSuite.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace66747889", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace66747889'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@value=&apos;Delete&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [5185e41d-3549-4b28-93f3-02b873e3c6eb, findElement {using=xpath, value=//input[@value=&apos;Delete&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 115.4.0, moz:accessibilityChecks: false, moz:buildID: 20231016232700, moz:debuggerAddress: 127.0.0.1:15675, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 7240, moz:profile: C:\Users\gowthrj\AppData\Lo..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:15675/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5185e41d-3549-4b28-93f3-02b873e3c6eb
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at com.amazon.Hawk.Pages.BuyPO.deleteProductsFromCart(BuyPO.java:59)
+	at com.amazon.Hawk.TestSuites.BuyTestSuite.addToCartAndVerify(BuyTestSuite.java:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>44</td>
+<td>com.amazon.Hawk.TestSuites.BuyTestSuite@294425a7</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.DbTestSuite.findDuplicates()'><b>findDuplicates</b><br>Test class: com.amazon.Hawk.TestSuites.DbTestSuite</td>
+<td></td>
+<td>0</td>
+<td>com.amazon.Hawk.TestSuites.DbTestSuite@57a3af25</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.SearchTestSuite.search_products_with_login()'><b>search_products_with_login</b><br>Test class: com.amazon.Hawk.TestSuites.SearchTestSuite<br>Parameters: iphone, firefox</td>
+<td></td>
+<td>23</td>
+<td>com.amazon.Hawk.TestSuites.SearchTestSuite@4466af20</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.LocalizationTestSuite.checkINRCurrencySymbol()'><b>checkINRCurrencySymbol</b><br>Test class: com.amazon.Hawk.TestSuites.LocalizationTestSuite</td>
+<td></td>
+<td>13</td>
+<td>com.amazon.Hawk.TestSuites.LocalizationTestSuite@5049d8b2</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.SearchTestSuite.search_products_with_login()'><b>search_products_with_login</b><br>Test class: com.amazon.Hawk.TestSuites.SearchTestSuite<br>Parameters: iphone, chrome</td>
+<td></td>
+<td>18</td>
+<td>com.amazon.Hawk.TestSuites.SearchTestSuite@4466af20</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.BuyTestSuite.buyProductAndVerify()'><b>buyProductAndVerify</b><br>Test class: com.amazon.Hawk.TestSuites.BuyTestSuite<br/>
+<a href="#Output-536994956" onClick='toggleBox("Output-536994956", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-536994956" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-536994956">
+<br><img src='C:\Users\gowthrj\eclipse-workspace\Hawk\src\test\resources\Screenshots\buyProductAndVerify1700990701337.png' height='300' width='400'/><br><br/>
+</div>
+</td>
+<td></td>
+<td>35</td>
+<td>com.amazon.Hawk.TestSuites.BuyTestSuite@294425a7</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.LoginTestSuite.login_with_incorrect_email()'><b>login_with_incorrect_email</b><br>Test class: com.amazon.Hawk.TestSuites.LoginTestSuite<br>Parameters: gowthrj+gamma-sim@amazon.co, owerty, Gowtham Vanilla, chrome</td>
+<td></td>
+<td>9</td>
+<td>com.amazon.Hawk.TestSuites.LoginTestSuite@67d48005</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.SearchTestSuite.search_products_without_login()'><b>search_products_without_login</b><br>Test class: com.amazon.Hawk.TestSuites.SearchTestSuite<br>Parameters: encyclopedia, chrome</td>
+<td></td>
+<td>16</td>
+<td>com.amazon.Hawk.TestSuites.SearchTestSuite@4466af20</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.SearchTestSuite.search_products_with_login()'><b>search_products_with_login</b><br>Test class: com.amazon.Hawk.TestSuites.SearchTestSuite<br>Parameters: basketball, firefox</td>
+<td></td>
+<td>25</td>
+<td>com.amazon.Hawk.TestSuites.SearchTestSuite@4466af20</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.LocalizationTestSuite.checkUSDCurrencySymbol()'><b>checkUSDCurrencySymbol</b><br>Test class: com.amazon.Hawk.TestSuites.LocalizationTestSuite</td>
+<td></td>
+<td>8</td>
+<td>com.amazon.Hawk.TestSuites.LocalizationTestSuite@5049d8b2</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.SearchTestSuite.search_products_with_login()'><b>search_products_with_login</b><br>Test class: com.amazon.Hawk.TestSuites.SearchTestSuite<br>Parameters: encyclopedia, firefox</td>
+<td></td>
+<td>22</td>
+<td>com.amazon.Hawk.TestSuites.SearchTestSuite@4466af20</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.SearchTestSuite.search_products_without_login()'><b>search_products_without_login</b><br>Test class: com.amazon.Hawk.TestSuites.SearchTestSuite<br>Parameters: iphone, firefox</td>
+<td></td>
+<td>16</td>
+<td>com.amazon.Hawk.TestSuites.SearchTestSuite@4466af20</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.SearchTestSuite.search_products_without_login()'><b>search_products_without_login</b><br>Test class: com.amazon.Hawk.TestSuites.SearchTestSuite<br>Parameters: basketball, firefox</td>
+<td></td>
+<td>19</td>
+<td>com.amazon.Hawk.TestSuites.SearchTestSuite@4466af20</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.LoginTestSuite.login_with_incorrect_email()'><b>login_with_incorrect_email</b><br>Test class: com.amazon.Hawk.TestSuites.LoginTestSuite<br>Parameters: gowthrj+gamma-sim@amazon.co, owerty, Gowtham Vanilla, firefox</td>
+<td></td>
+<td>13</td>
+<td>com.amazon.Hawk.TestSuites.LoginTestSuite@67d48005</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.SearchTestSuite.search_products_with_login()'><b>search_products_with_login</b><br>Test class: com.amazon.Hawk.TestSuites.SearchTestSuite<br>Parameters: encyclopedia, chrome</td>
+<td></td>
+<td>18</td>
+<td>com.amazon.Hawk.TestSuites.SearchTestSuite@4466af20</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.SearchTestSuite.search_products_without_login()'><b>search_products_without_login</b><br>Test class: com.amazon.Hawk.TestSuites.SearchTestSuite<br>Parameters: encyclopedia, firefox</td>
+<td></td>
+<td>16</td>
+<td>com.amazon.Hawk.TestSuites.SearchTestSuite@4466af20</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.DbTestSuite.verifyMostSoldProduct()'><b>verifyMostSoldProduct</b><br>Test class: com.amazon.Hawk.TestSuites.DbTestSuite</td>
+<td></td>
+<td>0</td>
+<td>com.amazon.Hawk.TestSuites.DbTestSuite@57a3af25</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.SearchTestSuite.search_products_with_login()'><b>search_products_with_login</b><br>Test class: com.amazon.Hawk.TestSuites.SearchTestSuite<br>Parameters: basketball, chrome</td>
+<td></td>
+<td>18</td>
+<td>com.amazon.Hawk.TestSuites.SearchTestSuite@4466af20</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.LoginTestSuite.login_with_correct_credentials()'><b>login_with_correct_credentials</b><br>Test class: com.amazon.Hawk.TestSuites.LoginTestSuite<br>Parameters: gowthrj+gamma-sim@amazon.com, qwerty, Gowtham Vanilla, firefox</td>
+<td></td>
+<td>28</td>
+<td>com.amazon.Hawk.TestSuites.LoginTestSuite@67d48005</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.DbTestSuite.findMaxPriceProduct()'><b>findMaxPriceProduct</b><br>Test class: com.amazon.Hawk.TestSuites.DbTestSuite</td>
+<td></td>
+<td>0</td>
+<td>com.amazon.Hawk.TestSuites.DbTestSuite@57a3af25</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.LoginTestSuite.login_with_incorrect_password()'><b>login_with_incorrect_password</b><br>Test class: com.amazon.Hawk.TestSuites.LoginTestSuite<br>Parameters: gowthrj+gamma-sim@amazon.com, owerty, Gowtham Vanilla, firefox</td>
+<td></td>
+<td>13</td>
+<td>com.amazon.Hawk.TestSuites.LoginTestSuite@67d48005</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.LoginTestSuite.login_with_correct_credentials()'><b>login_with_correct_credentials</b><br>Test class: com.amazon.Hawk.TestSuites.LoginTestSuite<br>Parameters: gowthrj+gamma-sim@amazon.com, qwerty, Gowtham Vanilla, chrome</td>
+<td></td>
+<td>20</td>
+<td>com.amazon.Hawk.TestSuites.LoginTestSuite@67d48005</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.SearchTestSuite.search_products_without_login()'><b>search_products_without_login</b><br>Test class: com.amazon.Hawk.TestSuites.SearchTestSuite<br>Parameters: iphone, chrome</td>
+<td></td>
+<td>16</td>
+<td>com.amazon.Hawk.TestSuites.SearchTestSuite@4466af20</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.LoginTestSuite.login_with_incorrect_password()'><b>login_with_incorrect_password</b><br>Test class: com.amazon.Hawk.TestSuites.LoginTestSuite<br>Parameters: gowthrj+gamma-sim@amazon.com, owerty, Gowtham Vanilla, chrome<br/>
+<a href="#Output-1112474296" onClick='toggleBox("Output-1112474296", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1112474296" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1112474296">
+<br><img src='C:\Users\gowthrj\eclipse-workspace\Hawk\src\test\resources\Screenshots\login_with_incorrect_password1700990834431.png' height='300' width='400'/><br><br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>com.amazon.Hawk.TestSuites.LoginTestSuite@67d48005</td></tr>
+<tr>
+<td title='com.amazon.Hawk.TestSuites.SearchTestSuite.search_products_without_login()'><b>search_products_without_login</b><br>Test class: com.amazon.Hawk.TestSuites.SearchTestSuite<br>Parameters: basketball, chrome</td>
+<td></td>
+<td>13</td>
+<td>com.amazon.Hawk.TestSuites.SearchTestSuite@4466af20</td></tr>
+</table><p>
+</body>
+</html>
